@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie API Documentation</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <h1>Movie API Documentation</h1>
+
+        <h2>Overview</h2>
+        <p>
+        The Movie API provides a simple RESTful interface for managing a list of movies. You can retrieve, create, update, and delete movies using standard HTTP methods (GET, POST, PUT, DELETE).
+        </p>
+
+        <h2>API Endpoints</h2>
+
+        <h3>GET /api/movies</h3>
+        <p>Returns a list of all movies in the database.</p>
+
+        <h3>GET /api/movies/:id</h3>
+        <p>Returns the details of a specific movie by its ID.</p>
+
+        <h3>POST /api/movies</h3>
+        <p>Creates a new movie with the given title, year, and genre.</p>
+
+        <h3>PUT /api/movies/:id</h3>
+        <p>Updates the details of an existing movie by its ID.</p>
+
+        <h3>DELETE /api/movies/:id</h3>
+        <p>Deletes a movie by its ID.</p>
+
+        <h2>Usage Examples</h2>
+
+        <h3>Get a list of movies</h3>
+        <pre>
+GET /api/movies
+        </pre>
+
+        <h3>Get a specific movie by ID</h3>
+        <pre>
+GET /api/movies/1
+        </pre>
+
+        <h3>Create a new movie</h3>
+        <pre>
+POST /api/movies
+{
+  "title": "Inception",
+  "year": 2010,
+  "genre": "Action, Adventure, Sci-Fi"
+}
+        </pre>
+
+        <h3>Update an existing movie by ID</h3>
+        <pre>
+PUT /api/movies/1
+{
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "genre": "Drama"
+}
+        </pre>
+
+        <h3>Delete a movie by ID</h3>
+        <pre>
+DELETE /api/movies/1
+        </pre>
+
+        <h2>Demo</h2>
+        <p>Click the button below to fetch a list of movies:</p>
+        <button id="demo-button">Get Movies</button>
+        <div id="demo-output"></div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
